@@ -7,7 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+//标识出需要哪个布局文件
+@ContentView(R.layout.activity_main)
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private Button btn1;
     private Button btn2;
@@ -16,8 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+//        setContentView(R.layout.activity_main);
         btn1 = findViewById(R.id.button1);
         btn2 = findViewById(R.id.button2);
 
